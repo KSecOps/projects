@@ -1,0 +1,30 @@
+"""
+Bitcoin Investment Alert
+
+This program calculates the value of your Bitcoin investment in USD 
+and alerts you if it falls below $30,000.
+
+Steps:
+1. Define a function to convert Bitcoin to USD.
+2. Use the function to check if the investment is below $30,000.
+3. Print an alert message if the value is too low.
+
+Assumption: 1 Bitcoin = $40,000
+"""
+
+# Define investment details
+investment_in_bitcoin = 1.2
+bitcoin_to_usd = 40000
+
+# Function to convert Bitcoin to USD
+def bitcoin_to_usd(bitcoin_amount, bitcoin_value_usd):
+    return bitcoin_amount * bitcoin_value_usd
+
+# Calculate investment value in USD
+investment_in_usd = bitcoin_to_usd(investment_in_bitcoin, bitcoin_to_usd)
+
+# Check if investment falls below $30,000
+if investment_in_usd < 30000:
+    print(" Alert: Your Bitcoin investment is below $30,000!")
+else:
+    print(" Your Bitcoin investment is above $30,000.")
